@@ -31,5 +31,9 @@ Testing procedure:
     4.Next, move the request you want to work with to the Test Steps (just drag it with the mouse, or right-click on the appropriate request and put "Add to TestCase").
     5.Now for the script to work, you need to set 2 properties at the level of the respective TestCase.
       Click on your TestCase, the property will appear at the bottom left, click on custom and add.
-      You need 2 properties: "request" - the name of the request you entered and "file" - the path to the csv data file.
+      You need 2 properties: "request" - the name of the request you entered and "file" - the full path to the csv data file.
+    6.Now just open the script and run it (green arrow at the top left) 
+    7.A text file with request-response pairs is created in the path where the project is stored. 
+      Example: ProjectPath\SoapUIResults\Request-Response_15-Mar-2021\ nacitajRequest_12-58-26.txt
+      A folder will be created according to actual day + the appropriate file, which has a name in the form "NameRequest_hh-mm-ss.txt" 
     
