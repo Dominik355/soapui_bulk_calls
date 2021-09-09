@@ -36,4 +36,12 @@ Testing procedure:
     7.A text file with request-response pairs is created in the path where the project is stored. 
       Example: ProjectPath\SoapUIResults\Request-Response_15-Mar-2021\ nacitajRequest_12-58-26.txt
       A folder will be created according to actual day + the appropriate file, which has a name in the form "NameRequest_hh-mm-ss.txt" 
+      
+      
+Sources:
+        https://dzone.com/articles/how-to-achieve-csv-reporting-in-soapui-open-source-1
+
+        http://opencsv.sourceforge.net/
+
+        https://www.youtube.com/watch?v=FxtMsva83CI&list=PLL34mf651faMwvuS3nBju98QgCByRaQQZ
     
