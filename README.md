@@ -3,16 +3,20 @@ groovy script providing bulk calls for soapui based on csv data
 
 Every step in the script is commented
 
-To get started, you need to download two JAR files : 
+To get started, you need to download two JAR files :
+
         OpenCSV(https://mvnrepository.com/artifact/com.opencsv/opencsv)
         Apache-commons-lang3(https://mvnrepository.com/artifact/org.apache.commons/commons-lang3)
-Place these in the folder where you have SoapUI installed and then \ bin \ ext     
+        
+        Place these in the folder where you have SoapUI installed and then \ bin \ ext     
 
 Data in CSV format:
+
     The first line is the names that specify the path directly in the xml request (so that the values can be mapped directly to them).
     Next comes the data itself (it doesn't matter if "," or ";" is used)
   
-    Example:
+Example:
+    
         <soapenv:Body>
           <tem:Add>
             <tem:intA>?</tem:intA>
