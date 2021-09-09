@@ -7,19 +7,19 @@ def fileName = testRunner.testCase.getPropertyValue("file")
 def requestName = testRunner.testCase.getPropertyValue("request")
 
 //asserts for those 2 properties
-assert fileName != null : "Musis vytvorit fileName property na urovni prislusneho testCase"
-assert requestName != null : "Musis vytvorit requestName property na urovni prislusneho testCase"
+assert fileName != null : "You need to create a fileName property at the level of the appropriate testCase!"
+assert requestName != null : "You must create a requestName property at the level of the appropriate testCase!"
 
 //check if there is step with such a name
 if(testRunner.testCase.testSteps[requestName] == null) {
-	throw new Exception("uvedeny request nie je umiestneny v krokoch tohoto testcase-u")	
+	throw new Exception("the specified request is not located in the steps of this testcase!")	
 }
 
 //Creation of CSVReader from provided filename
 def providedFile = new File(fileName)
 //check if file exists
 if(!providedFile.exists()) {
-	throw new Exception("Subor neexistuje, skontroluj ci si spravne zadal nazov a pripadne cestu k nemu")	
+	throw new Exception("The file does not exist, check if you entered the name correctly and the path to it if necessary!")	
 }
 
 CSVReader reader = new CSVReader(new FileReader(providedFile))
@@ -35,7 +35,7 @@ def responses = new ArrayList<String[]>()
 def requests = new ArrayList<String[]>()
 
 //check if number of rows is equals to number of data
-assert rows.length == data[0].length : "Pocet nazvov stlpcov a dlzky dat sa nezhoduju"
+assert rows.length == data[0].length : "The number of column names and the length of the data do not match!"
 
 //cycle for sending requests
 for(String[] row in data) {
